@@ -749,15 +749,15 @@ public class BlueetoothGpsManager {
 //	        	Log.e(LOG_TAG, "Bluetooth is not enabled");
 //	        	disable(R.string.msg_bluetooth_disabled);
 //	        } else
-	        if (Settings.Secure.getInt(callingService.getContentResolver(),Settings.Secure.ALLOW_MOCK_LOCATION, 0)==0){
-	        	Log.e(LOG_TAG, "Mock location provider OFF");
-	        	disable(R.string.msg_mock_location_disabled);
+	        //if (Settings.Secure.getInt(callingService.getContentResolver(),Settings.Secure.ALLOW_MOCK_LOCATION, 0)==0){
+	        //	Log.e(LOG_TAG, "Mock location provider OFF");
+	        //	disable(R.string.msg_mock_location_disabled);
 //	        } else if ( (! locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER))
 //	        		 && (sharedPreferences.getBoolean(BluetoothGpsProviderService.PREF_REPLACE_STD_GPS, true))
 //	        			) {
 //	        	Log.e(LOG_TAG, "GPS location provider OFF");
 //	        	disable(R.string.msg_gps_provider_disabled);
-	        } else {
+	        //} else {
 //				final BluetoothDevice gpsDevice = bluetoothAdapter.getRemoteDevice(gpsDeviceAddress);
 				final String gpsDevice = gpsDeviceAddress;
 				Boolean foundDevice = false;
@@ -848,7 +848,7 @@ public class BlueetoothGpsManager {
 				if (!foundDevice){
 					return false;
 				}
-			}
+			//}
 		}
 		return this.enabled;
 	}
